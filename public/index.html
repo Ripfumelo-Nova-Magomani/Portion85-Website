@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portion 85 - Farming, Educational Tourism, Skills Development, and Business Growth in Centurion, Gauteng">
+    <meta name="keywords" content="farm experience, venue hire, conferencing, events, South Africa, guided tours, birthday parties, school groups, educational tourism, skills development">
+    <meta name="author" content="Portion 85">
+    <meta property="og:title" content="Portion 85 - Premium Farm Experience">
+    <meta property="og:description" content="Farming, Educational Tourism, Skills Development, and Business Growth">
+    <meta property="og:image" content="/images/portion85-hero.jpg">
+    <meta property="og:url" content="https://portion85.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portion 85 - Premium Farm Experience">
+    <meta name="twitter:description" content="Farming, Educational Tourism, Skills Development, and Business Growth">
+    <meta name="twitter:image" content="/images/portion85-hero.jpg">
+    <title>Portion 85 - Farming, Educational Tourism & Skills Development</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 2;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero h1 .highlight {
+            color: #f97316;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #f97316;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            animation: bounce 2s infinite;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: #fafaf9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #292524;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            color: #57534e;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            position: relative;
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #292524;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #57534e;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #f97316;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #292524;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: #57534e;
+            line-height: 1.6;
+        }
+        
+        /* Facilities Section */
+        .facilities {
+            padding: 5rem 0;
+            background: #f5f5f4;
+        }
+        
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .facility-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .facility-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .facility-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .facility-card:hover .facility-image img {
+            transform: scale(1.1);
+        }
+        
+        .facility-content {
+            padding: 1.5rem;
+        }
+        
+        .facility-content h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #292524;
+            margin-bottom: 0.5rem;
+        }
+        
+        .facility-content p {
+            color: #57534e;
+            line-height: 1.6;
+        }
+        
+        /* Map Section */
+        .map-section {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .map-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .map-info {
+            padding: 2rem;
+        }
+        
+        .map-info h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #292524;
+            margin-bottom: 1.5rem;
+        }
+        
+        .map-info p {
+            font-size: 1.1rem;
+            color: #57534e;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .location-details {
+            background: #f5f5f4;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .location-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .location-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .location-icon {
+            width: 24px;
+            height: 24px;
+            color: #f97316;
+        }
+        
+        .map-embed {
+            position: relative;
+            height: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+        
+        .custom-map {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .map-placeholder {
+            padding: 2rem;
+        }
+        
+        .map-placeholder h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .map-placeholder p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .directions-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .directions-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Interactive Map Overlay */
+        .interactive-map {
+            position: relative;
+            height: 400px;
+            background: #f0f9ff;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+        
+        .map-pin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+        
+        .pin-icon {
+            width: 40px;
+            height: 40px;
+            background: #f97316;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+        }
+        
+        .pin-icon::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+        
+        .map-tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 0.5rem;
+        }
+        
+        .map-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: white;
+        }
+        
+        .map-pin:hover .map-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 5rem 0;
+            background: #166534;
+            color: white;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonial-role {
+            opacity: 0.8;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: #f5f5f4;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #292524;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e7e5e4;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #f97316;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            color: #f97316;
+            margin-top: 0.25rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .map-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="/images/hero-bg.jpg" alt="Portion 85 Farm" class="hero-bg">
+        <div class="hero-content">
+            <h1>
+                Explore <span class="highlight">Portion 85</span>
+            </h1>
+            <p>Farming, Educational Tourism, Skills Development, and Business Growth</p>
+            <div class="hero-buttons">
+                <a href="#facilities" class="btn btn-primary">
+                    Explore Our Facilities
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Book A Visit</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>ABOUT PORTION 85</h2>
+                    <p>
+                        Portion 85 is a portion of Farm 385 in Knopjeslaagte in Centurion, Gauteng. It is in the same belt that
+                        splits the City of Johannesburg and the City of Tshwane. Historically these different portions of farms
+                        were under the same roof.
+                    </p>
+                    <p>
+                        We have 25 different facilities that provide a variety of experiences and attraction to our visitors and
+                        guests, enabling them to build memories and satisfy a wide range of personal needs, from pleasure to a
+                        search for meaning.
+                    </p>
+                    <p>
+                        As a unique addition to the bouquet of experiences, we intend to offer a simulation of wine processing
+                        which will give our guests and visitors a live observation of wine processing including key steps like
+                        preparation (fruit de-stemming/crushing) to bottling.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="/images/about-image.jpg" alt="Portion 85 Landscape">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>OUR CORE AREAS</h2>
+                <p>
+                    Discover the diverse range of activities and services that make Portion 85 a unique destination for
+                    visitors and a hub for growth and development.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🌱 FARMING</h3>
+                    <p>Sustainable agricultural practices focusing on local produce and environmental stewardship.</p>
+                </div>
+                <div class="service-card">
+                    <h3>📚 EDUCATIONAL TOURISM</h3>
+                    <p>Tourism that promotes knowledge, enhances skills, educates and enables research opportunities.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🎓 EDUCATION</h3>
+                    <p>Providing learning experiences for all ages through hands-on activities and structured programs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔧 SKILLS DEVELOPMENT</h3>
+                    <p>Training programs designed to equip individuals with practical skills for personal and professional growth.</p>
+                </div>
+                <div class="service-card">
+                    <h3>👥 TRAINING</h3>
+                    <p>Specialized courses and workshops led by industry experts in various fields.</p>
+                </div>
+                <div class="service-card">
+                    <h3>💼 JOB CREATION & BUSINESS DEVELOPMENT</h3>
+                    <p>Initiatives aimed at fostering entrepreneurship and creating employment opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities" id="facilities">
+        <div class="container">
+            <div class="section-header">
+                <h2>OUR FACILITIES</h2>
+                <p>
+                    Explore our 25 different facilities that provide a variety of experiences and attractions for our
+                    visitors.
+                </p>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="/images/facility-1.jpg" alt="Wine Processing Simulation">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Wine Processing Simulation</h3>
+                        <p>Experience a live observation of wine processing from fruit preparation to bottling.</p>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="/images/facility-2.jpg" alt="Educational Farm Tours">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Educational Farm Tours</h3>
+                        <p>Guided tours showcasing sustainable farming practices and agricultural innovations.</p>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="/images/facility-3.jpg" alt="Training Center">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Training Center</h3>
+                        <p>Modern facilities for workshops, seminars, and skills development programs.</p>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="/images/facility-4.jpg" alt="Outdoor Adventure Area">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Outdoor Adventure Area</h3>
+                        <p>Exciting activities for all ages in a beautiful natural setting.</p>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="/images/facility-5.jpg" alt="Cultural Exhibition Space">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Cultural Exhibition Space</h3>
+                        <p>Showcasing local heritage, arts, and traditions through interactive displays.</p>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="/images/facility-6.jpg" alt="Event Venue">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Event Venue</h3>
+                        <p>Versatile spaces for private events, conferences, and celebrations.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="/facilities" class="btn btn-primary">
+                    View All Facilities
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="location">
+        <div class="container">
+            <div class="map-container">
+                <div class="map-info">
+                    <h2>FIND US</h2>
+                    <p>
+                        Located in the heart of Centurion, Gauteng, Portion 85 is easily accessible and perfectly positioned 
+                        between Johannesburg and Pretoria. Our farm offers a peaceful escape from city life while remaining 
+                        conveniently close to major urban centers.
+                    </p>
+                    
+                    <div class="location-details">
+                        <div class="location-item">
+                            <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <strong>Address:</strong><br>
+                                Portion 85 M26 Knopjeslaagte<br>
+                                Centurion, 0014, Gauteng
+                            </div>
+                        </div>
+                        
+                        <div class="location-item">
+                            <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            <div>
+                                <strong>Distance:</strong><br>
+                                30 minutes from Johannesburg<br>
+                                25 minutes from Pretoria
+                            </div>
+                        </div>
+                        
+                        <div class="location-item">
+                            <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9,22 9,12 15,12 15,22"/>
+                            </svg>
+                            <div>
+                                <strong>Accessibility:</strong><br>
+                                Easy highway access<br>
+                                Ample parking available
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://maps.google.com/maps?q=Portion+85+M26+Knopjeslaagte+Centurion+0014" 
+                       target="_blank" class="btn btn-primary">
+                        Get Directions
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="map-embed">
+                    <!-- Google Maps Embed -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.123456789!2d28.1234567!3d-25.8765432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCenturion%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            
+            <!-- Interactive Custom Map -->
+            <div class="interactive-map">
+                <div class="map-pin" onclick="showLocationInfo()">
+                    <div class="pin-icon"></div>
+                    <div class="map-tooltip">
+                        <strong>Portion 85</strong><br>
+                        Click for more info
+                    </div>
+                </div>
+                
+                <!-- Map Background Pattern -->
+                <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0; opacity: 0.1;">
+                    <defs>
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#10b981" stroke-width="1"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)" />
+                </svg>
+                
+                <!-- Decorative Elements -->
+                <div style="position: absolute; top: 20%; left: 20%; width: 60px; height: 60px; background: rgba(16, 185, 129, 0.2); border-radius: 50%;"></div>
+                <div style="position: absolute; top: 70%; left: 70%; width: 40px; height: 40px; background: rgba(16, 185, 129, 0.3); border-radius: 50%;"></div>
+                <div style="position: absolute; top: 30%; right: 20%; width: 50px; height: 50px; background: rgba(16, 185, 129, 0.2); border-radius: 50%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>VISITOR EXPERIENCES</h2>
+                <p>Hear what our visitors have to say about their time at Portion 85.</p>
+            </div>
+            <div class="testimonial-card">
+                <blockquote>
+                    "The educational farm tour was eye-opening for our school group. The children learned so much about sustainable farming practices."
+                </blockquote>
+                <div class="testimonial-author">Sarah Johnson</div>
+                <div class="testimonial-role">School Teacher</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>CONTACT US</h2>
+                <p>Get in touch with us to learn more about Portion 85 or to plan your visit.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <div>
+                            <strong>Address</strong><br>
+                            Portion 85 M26 Knopjeslaagte Centurion, 0014
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <div>
+                            <strong>Phone</strong><br>
+                            Ms Siyanda Bani: 067 963 4795
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:info@portion85.co.za" style="color: #f97316;">info@portion85.co.za</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Interactive map pin click
+        function showLocationInfo() {
+            alert('Portion 85 - Premium Farm Experience\n\nAddress: Portion 85 M26 Knopjeslaagte, Centurion, 0014\nPhone: 067 963 4795\nEmail: info@portion85.co.za\n\nClick "Get Directions" to navigate with Google Maps!');
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .facility-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Map loading fallback
+        window.addEventListener('load', function() {
+            const iframe = document.querySelector('.map-embed iframe');
+            iframe.addEventListener('error', function() {
+                // If Google Maps fails to load, show custom map
+                const mapEmbed = document.querySelector('.map-embed');
+                mapEmbed.innerHTML = `
+                    <div class="custom-map">
+                        <div class="map-placeholder">
+                            <h3>📍 Portion 85 Location</h3>
+                            <p>Knopjeslaagte, Centurion, Gauteng</p>
+                            <a href="https://maps.google.com/maps?q=Portion+85+M26+Knopjeslaagte+Centurion+0014" 
+                               target="_blank" class="directions-btn">
+                                Open in Google Maps
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+        });
+    </script>
+</body>
+</html>
